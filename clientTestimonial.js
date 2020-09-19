@@ -4,9 +4,7 @@
   const buttonL = document.querySelector('#lftBtn')
   const buttonR = document.querySelector('#rgtBtn')
   let index = 0
-
-
-      var customers = []
+  var customers = []
 
       function Customer(img, name, text) {
         this.img = img
@@ -32,34 +30,34 @@
       createCustomer(4, 'Wanda', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')
 
 
-function leftBtn(){
-  if (index === 0) {
-    index = customers.length
+      function leftBtn(){
+        if (index === 0) {
+          index = customers.length
   }
-  index--
-  customerImage.src = customers[index].img
-  customerName.textContent = customers[index].name
-  customerText.textContent = customers[index].text
+        index--
+        customerImage.src = customers[index].img
+        customerName.textContent = customers[index].name
+        customerText.textContent = customers[index].text
 }
 
 
-function rightBtn() {
-  if (index === customers.length) {
-    index = 0
+      function rightBtn() {
+        if (index === customers.length) {
+          index = 0
   }
-  customerImage.src = customers[index].img
-  customerName.textContent = customers[index].name
-  customerText.textContent = customers[index].text
+        customerImage.src = customers[index].img
+        customerName.textContent = customers[index].name
+        customerText.textContent = customers[index].text
 
 }
 
-buttonL.addEventListener('click', function(e) {
-  leftBtn();
+      buttonL.addEventListener('click', function(e) {
+        leftBtn();
 
 },)
 
 
-buttonR.addEventListener('click', function(e) {
-  index++
-  rightBtn();
+      buttonR.addEventListener('click', function(e) {
+        index++
+        rightBtn();
 },)
